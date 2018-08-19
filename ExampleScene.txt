@@ -1,0 +1,23 @@
+# TODO: A star * will indicate the start of a scene followed by the name of the scene
+# If a scene is dependent on a previous scene, the possible starting points are indicated with ->
+# A line starting with - indicates a possible branch. The number following is separated by a dot in two parts, the
+# main branch number (aka all options with the same main branch number are mutually exclusive : these choices
+# appear at the same time on the screen), and the secondary branch number (the specific choice being made,
+# represented by a textual prompt).
+# The textual prompt to be displayed is input after two slashes //
+# The next main branch number to be chosen on selection of that choice is indicated after a ->
+# If the scene is to be ended with a given result, the branch number is prefaced with End
+# A line starting with + indicates an end result. The text to be displayed is indicated after // and
+# the following scene to be played is indicated by name after =
+# TODO: The end of a scene is indicated by $end
+# *scene1
+-0.1//Choice 1->2
+-0.2//Choice 2->1
+-1.1//Choice A->End3
+-1.2//Choice B->End4
+-2.1//Choice C->End4
+-2.2//Choice D->End5
++3//You got end 3=scene2
++4//You got end 4=scene2
++5//You got end 5 (yikes)=scene3
+# $end
